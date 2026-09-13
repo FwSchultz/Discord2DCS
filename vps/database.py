@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SQLite storage for Discord2DCS v0.10.0-beta-rc2.
+"""SQLite storage for Discord2DCS v0.10.0-beta.
 
 The DB stores only hashes of pairing codes and access tokens. Existing v0.4.x
 JSON files are imported once on first start for backwards compatibility.

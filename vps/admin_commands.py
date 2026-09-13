@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discord slash-command administration for Discord2DCS v0.10.0-beta-rc2."""
+"""Discord slash-command administration for Discord2DCS v0.10.0-beta."""
 
 from __future__ import annotations
 

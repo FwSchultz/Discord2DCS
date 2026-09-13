@@ -1,4 +1,4 @@
--- Discord2DCS v0.10.0-beta-rc2
+-- Discord2DCS v0.10.0-beta
 -- DCS-side GameGUI hook
 --
 -- Installation:
@@ -25,7 +25,7 @@ local function loadDiscord2DCS()
     local okSocket, socket = pcall(require, "socket")
 
     local APP = "Discord2DCS"
-    local VERSION = "0.10.0-beta-rc2"
+    local VERSION = "0.10.0-beta"
     local HOST = "127.0.0.1"
     local PORT = 8765
     local TOGGLE_HOTKEY = "Ctrl+Shift+D"

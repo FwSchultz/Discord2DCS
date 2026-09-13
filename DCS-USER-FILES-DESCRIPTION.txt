@@ -1,4 +1,4 @@
-Discord2DCS 0.10.0-beta-rc2
+Discord2DCS 0.10.0-beta
 Discord ↔ DCS without Alt+Tab
 
 ============================================================
@@ -54,8 +54,8 @@ SUPPORT-LOGS
 %LOCALAPPDATA%\Discord2DCS\pc-client\Discord2DCS-Client.log
 %USERPROFILE%\Saved Games\DCS*\Logs\Discord2DCS.log
 
-HINWEIS ZUM RELEASE CANDIDATE
-Die Kernfunktionen wurden praktisch getestet. Vor dem endgültigen öffentlichen Beta-Release ist noch ein kompletter Fresh-Install-Test auf einem zweiten/sauberen Windows-PC vorgesehen.
+HINWEIS ZUR PUBLIC BETA
+Die Kernfunktionen sowie eine vollständige Neuinstallation auf einem zweiten/sauberen Windows-PC wurden erfolgreich getestet.
 
 ============================================================
 ENGLISH

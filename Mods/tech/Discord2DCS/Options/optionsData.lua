@@ -1,6 +1,6 @@
 cdata = {
     D2DCS_TITLE = _("Discord2DCS - DCS/Discord Chat Bridge"),
-    D2DCS_VERSION = _("Version 0.10.0-beta-rc2"),
+    D2DCS_VERSION = _("Version 0.10.0-beta"),
     D2DCS_ENABLE = _("Discord2DCS aktivieren / Enable Discord2DCS"),
     D2DCS_ENABLE_TIP = _("Aenderungen werden nach einem DCS-Neustart wirksam. / Changes take effect after restarting DCS."),
     D2DCS_OVERLAY = _("Overlay beim DCS-Start anzeigen / Show overlay when DCS starts"),

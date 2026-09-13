@@ -1,6 +1,15 @@
 # Changelog
 
-## 0.10.0-beta-rc2
+## 0.10.0-beta
+
+### First public beta
+- Promoted the successfully tested 0.10.0-beta-rc2 release candidate to the first public beta.
+- Complete fresh installation on a second/clean Windows PC tested successfully.
+- Discord → DCS and DCS → Discord verified after fresh installation.
+- DCS Special Options, branding icons, pairing and Windows client installation verified.
+- No protocol or runtime behavior changes compared with 0.10.0-beta-rc2.
+
+## 0.10.0-beta
 
 ### Licensing
 - Added the MIT License.
@@ -9,7 +18,7 @@
 - Updated the release checklist: licensing is complete.
 - No protocol or runtime behavior changes compared with 0.10.0-beta-rc1.
 
-## 0.10.0-beta-rc2
+## 0.10.0-beta
 
 ### Release preparation
 - Documentation completely rewritten for first-time users in German and English.

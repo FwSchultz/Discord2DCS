@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emergency CLI administration for Discord2DCS v0.10.0-beta-rc2.
+"""Emergency CLI administration for Discord2DCS v0.10.0-beta.
 
 Normal community administration should happen through Discord slash commands.
 This CLI remains available if Discord administration is unavailable.

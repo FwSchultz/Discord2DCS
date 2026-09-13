@@ -5,7 +5,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$Version = '0.10.0-beta-rc2'
+$Version = '0.10.0-beta'
 $SourceRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $InstallRoot = Join-Path $env:LOCALAPPDATA 'Discord2DCS'
 $InstalledClient = Join-Path $InstallRoot 'pc-client'

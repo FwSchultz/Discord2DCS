@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discord2DCS v0.10.0-beta-rc2 - VPS Discord bot + WebSocket bridge.
+"""Discord2DCS v0.10.0-beta - VPS Discord bot + WebSocket bridge.
 
 v0.5 adds SQLite-backed client management and a Discord slash-command admin UI.
 Community PC clients remain protocol-compatible with v0.4.x.
@@ -28,7 +28,7 @@ from admin_commands import AdminConfig, install_admin_group
 from database import Database
 
 APP = "discord2dcs"
-VERSION = "0.10.0-beta-rc2"
+VERSION = "0.10.0-beta"
 LOG = logging.getLogger(APP)
 
 

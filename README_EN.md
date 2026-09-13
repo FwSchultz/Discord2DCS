@@ -5,7 +5,7 @@
 
 **Discord ↔ DCS – without Alt+Tab.**
 
-![Version](https://img.shields.io/badge/version-0.10.0-beta-rc2-blue)
+![Version](https://img.shields.io/badge/version-0.10.0-beta-blue)
 ![DCS World](https://img.shields.io/badge/DCS%20World-2.9%2B-informational)
 ![Windows](https://img.shields.io/badge/client-Windows-0078D4)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB)
@@ -16,7 +16,7 @@
 [Deutsche Dokumentation](README.md)
 </div>
 
-> **Beta Release Candidate:** The core features have been tested in practice. Before the public beta, perform one complete fresh installation on a second/clean Windows PC.
+> **Public Beta:** The core features and a complete fresh installation on a second/clean Windows PC have been tested successfully.
 
 ## Contents
 

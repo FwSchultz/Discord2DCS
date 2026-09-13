@@ -1,11 +1,11 @@
-# Discord2DCS 0.10.0-beta-rc2 – Release-Checkliste
+# Discord2DCS 0.10.0-beta – Release-Checkliste
 
 ## Pflicht vor Public Beta
 
 - [x] MIT-Lizenz ausgewählt und `LICENSE` hinzugefügt.
-- [ ] Frische Installation auf einem zweiten/sauberen Windows-PC testen.
+- [x] Frische Installation auf einem zweiten/sauberen Windows-PC erfolgreich getestet.
 - [ ] Test mit bereits vorhandenem Python **und** ohne Python durchführen.
-- [ ] Update von v0.9.4-alpha auf 0.10.0-beta-rc2 testen; Access-Token muss erhalten bleiben.
+- [ ] Update von v0.9.4-alpha auf 0.10.0-beta testen; Access-Token muss erhalten bleiben.
 - [ ] Deutsch und English im Installer testen.
 - [ ] DCS Special Options testen: Aktivieren, Overlay beim Start, Systemmeldungen, Sprache.
 - [ ] Desktop-Icon und DCS-Special-Icon prüfen.
@@ -23,8 +23,8 @@
 - [ ] Inhalt des GitHub-Repository-ZIPs hineinkopieren.
 - [ ] `git status` kontrollieren – keine Secrets oder Datenbankdateien.
 - [ ] README DE/EN auf GitHub prüfen.
-- [ ] Release `v0.10.0-beta-rc2` erstellen.
-- [ ] Als Release-Asset mindestens `Discord2DCS-Community-Client-v0.10.0-beta-rc2.zip` hochladen.
+- [ ] Release `v0.10.0-beta` erstellen.
+- [ ] Als Release-Asset mindestens `Discord2DCS-Community-Client-v0.10.0-beta.zip` hochladen.
 - [ ] Optional Komplettpaket für Server-Admins als zweites Asset hochladen.
 
 ## DCS User Files

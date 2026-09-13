@@ -1,4 +1,4 @@
-# Discord2DCS Community Client 0.10.0-beta-rc2
+# Discord2DCS Community Client 0.10.0-beta
 
 ## Deutsch – Schnellstart
 

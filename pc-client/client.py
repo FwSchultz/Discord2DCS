@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discord2DCS v0.10.0-beta-rc2 - Windows PC client.
+"""Discord2DCS v0.10.0-beta - Windows PC client.
 
 Local side:
     DCS GameGUI overlay (TCP server on 127.0.0.1:8765)
@@ -27,7 +27,7 @@ import websockets
 from websockets.exceptions import ConnectionClosed
 
 APP = "Discord2DCS-Client"
-VERSION = "0.10.0-beta-rc2"
+VERSION = "0.10.0-beta"
 BASE_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = BASE_DIR / "config.json"
 LOG_PATH = BASE_DIR / "Discord2DCS-Client.log"
