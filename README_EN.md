@@ -18,8 +18,23 @@
 
 > **Public Beta:** The core features and a complete fresh installation on a second/clean Windows PC have been tested successfully.
 
+## Downloads
+
+### ✈️ For pilots / clients
+
+**[⬇️ Download Discord2DCS Community Client v0.10.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
+
+Includes the Windows client, DCS hook, in-game overlay, installer, update/repair tools and DCS Special Options.
+
+### 🖥️ For community / server admins
+
+**[⬇️ Download Discord2DCS Server v0.10.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
+
+Includes the Discord bot, WebSocket bridge, Docker setup, TLS examples and the server setup guide.
+
 ## Contents
 
+- [Downloads](#downloads)
 - [What is Discord2DCS?](#what-is-discord2dcs)
 - [What does a pilot need?](#what-does-a-pilot-need)
 - [Pilot installation – step by step](#pilot-installation--step-by-step)
@@ -60,6 +75,8 @@ Only:
 No Python, Lua, Docker or GitHub knowledge is required. The installer checks for Python 3.12 and can install Python 3.12.10 automatically from python.org after verifying the installer's digital signature.
 
 ## Pilot installation – step by step
+
+➡️ **[Download the Community Client directly](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
 
 1. Download the Community Client ZIP.
 2. Right-click it and select **Extract All…**. Do not run the installer from inside the ZIP viewer.
@@ -132,6 +149,8 @@ DCS log:
 If a pairing code is invalid or expired, the admin must create a new code with `/dcs-client pairing`.
 
 ## For community admins
+
+➡️ **[Download the Server Package directly](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
 
 Normal pilots do **not** need their own VPS. A community runs one central server/bot. See [SERVER-ADMIN-GUIDE.md](SERVER-ADMIN-GUIDE.md).
 
