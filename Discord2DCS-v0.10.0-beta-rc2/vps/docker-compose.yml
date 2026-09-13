@@ -1,0 +1,14 @@
+services:
+  discord2dcs:
+    build: .
+    container_name: discord2dcs
+    restart: unless-stopped
+    env_file:
+      - .env
+    # Sicherer Standard fuer Reverse-Proxy-Betrieb:
+    # Der WebSocket-Port ist nur auf dem VPS selbst erreichbar.
+    ports:
+      - "127.0.0.1:${WS_PORT:-8766}:${WS_PORT:-8766}/tcp"
+    volumes:
+      - ./certs:/certs:ro
+      - ./data:/data

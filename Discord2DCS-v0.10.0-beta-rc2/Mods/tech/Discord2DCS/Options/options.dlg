@@ -1,0 +1,88 @@
+dialog = {
+    ["children"] = {
+        ["containerPlugin"] = {
+            ["children"] = {
+                ["titleLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 25, ["w"] = 890, ["x"] = 57, ["y"] = 30, },
+                        ["enabled"] = true, ["text"] = "$D2DCS_TITLE", ["tooltip"] = "", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "staticOptionsTitleSkin", }, },
+                    ["type"] = "Static",
+                },
+                ["versionLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 18, ["w"] = 300, ["x"] = 57, ["y"] = 58, },
+                        ["enabled"] = true, ["text"] = "$D2DCS_VERSION", ["tooltip"] = "", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "staticOptionsCommentSkin", }, },
+                    ["type"] = "Static",
+                },
+                ["isEnabledCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 20, ["w"] = 620, ["x"] = 57, ["y"] = 105, },
+                        ["enabled"] = true, ["state"] = true, ["tabOrder"] = 0,
+                        ["text"] = "$D2DCS_ENABLE", ["tooltip"] = "$D2DCS_ENABLE_TIP", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "checkBoxSkin_options", }, },
+                    ["type"] = "CheckBox",
+                },
+                ["showOverlayOnStartCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 20, ["w"] = 620, ["x"] = 57, ["y"] = 145, },
+                        ["enabled"] = true, ["state"] = true, ["tabOrder"] = 0,
+                        ["text"] = "$D2DCS_OVERLAY", ["tooltip"] = "", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "checkBoxSkin_options", }, },
+                    ["type"] = "CheckBox",
+                },
+                ["showSystemMessagesCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 20, ["w"] = 620, ["x"] = 57, ["y"] = 185, },
+                        ["enabled"] = true, ["state"] = true, ["tabOrder"] = 0,
+                        ["text"] = "$D2DCS_SYSTEM", ["tooltip"] = "", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "checkBoxSkin_options", }, },
+                    ["type"] = "CheckBox",
+                },
+                ["languageLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 20, ["w"] = 300, ["x"] = 57, ["y"] = 235, },
+                        ["enabled"] = true, ["text"] = "$D2DCS_LANGUAGE", ["tooltip"] = "$D2DCS_LANGUAGE_TIP", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "staticOptionsCaptionSkin", }, },
+                    ["type"] = "Static",
+                },
+                ["languageComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 24, ["w"] = 300, ["x"] = 57, ["y"] = 260, },
+                        ["enabled"] = true, ["tabOrder"] = 0, ["text"] = "", ["tooltip"] = "$D2DCS_LANGUAGE_TIP", ["visible"] = true, ["zindex"] = 3,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "comboListSkin_options", }, },
+                    ["type"] = "ComboList",
+                },
+                ["restartLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 40, ["w"] = 820, ["x"] = 57, ["y"] = 325, },
+                        ["enabled"] = true, ["text"] = "$D2DCS_RESTART", ["tooltip"] = "", ["visible"] = true, ["zindex"] = 0,
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "staticOptionsCommentSkin", }, },
+                    ["type"] = "Static",
+                },
+            },
+            ["params"] = {
+                ["bounds"] = { ["h"] = 600, ["w"] = 974, ["x"] = 0, ["y"] = 0, },
+                ["enabled"] = true, ["text"] = "", ["tooltip"] = "", ["visible"] = true, ["zindex"] = 2,
+            },
+            ["skin"] = { ["params"] = { ["name"] = "panelSkin", }, },
+            ["type"] = "Panel",
+        },
+    },
+    ["params"] = {
+        ["bounds"] = { ["h"] = 851, ["w"] = 1135, ["x"] = 0, ["y"] = 0, },
+        ["draggable"] = true, ["enabled"] = true, ["hasCursor"] = true, ["lockFlow"] = false,
+        ["modal"] = false, ["offscreen"] = false, ["resizable"] = false, ["text"] = "Discord2DCS", ["zOrder"] = 0,
+    },
+    ["skin"] = { ["params"] = { ["name"] = "windowSkin", }, },
+    ["type"] = "Window",
+}

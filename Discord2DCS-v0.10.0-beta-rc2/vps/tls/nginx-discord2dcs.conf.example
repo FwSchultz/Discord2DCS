@@ -1,0 +1,48 @@
+# Beispiel fuer einen bereits vorhandenen Nginx-Reverse-Proxy.
+# DOMAIN ersetzen und danach nginx -t && systemctl reload nginx.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name DOMAIN;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name DOMAIN;
+
+    ssl_certificate     /etc/letsencrypt/live/DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN/privkey.pem;
+
+    location = /ws {
+        proxy_pass http://127.0.0.1:8766;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 75s;
+        proxy_send_timeout 75s;
+    }
+
+    location = /health {
+        add_header Content-Type text/plain;
+        return 200 "Discord2DCS OK\n";
+    }
+
+    location / {
+        return 404;
+    }
+}

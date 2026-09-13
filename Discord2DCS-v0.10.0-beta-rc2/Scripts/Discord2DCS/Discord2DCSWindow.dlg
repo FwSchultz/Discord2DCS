@@ -1,0 +1,195 @@
+dialog = {
+    ["type"] = "Window",
+    ["params"] = {
+        ["bounds"] = {
+            [1] = {
+                ["h"] = 360,
+                ["w"] = 560,
+                ["x"] = 40,
+                ["y"] = 120
+            }
+        },
+        ["draggable"] = true,
+        ["enabled"] = true,
+        ["hasCursor"] = true,
+        ["lockFlow"] = false,
+        ["modal"] = false,
+        ["offscreen"] = false,
+        ["resizable"] = true,
+        ["zOrder"] = 113,
+        ["text"] = "Discord2DCS"
+    },
+    ["skin"] = {
+        ["params"] = {
+            ["name"] = "windowSkin"
+        },
+        ["skins"] = {
+            ["header"] = {
+                ["skinData"] = {
+                    ["params"] = {
+                        ["hasCloseButton"] = false,
+                        ["insets"] = {
+                            ["bottom"] = 2,
+                            ["left"] = 2,
+                            ["right"] = 2,
+                            ["top"] = 2
+                        }
+                    },
+                    ["states"] = {
+                        ["released"] = {
+                            [1] = {
+                                ["bkg"] = { ["center_center"] = "0x00000088" },
+                                ["text"] = { ["color"] = "0xffffffff" }
+                            },
+                            [2] = {
+                                ["bkg"] = { ["center_center"] = "0x00000088" },
+                                ["text"] = { ["color"] = "0xffffffff" }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        ["states"] = {
+            ["released"] = {
+                [1] = {
+                    ["bkg"] = { ["center_center"] = "0x00000000" }
+                }
+            }
+        }
+    },
+    ["children"] = {
+        ["ChatView"] = {
+            ["params"] = {
+                ["acceptDecimalPoint"] = false,
+                ["bounds"] = {
+                    ["h"] = 300,
+                    ["w"] = 560,
+                    ["x"] = 0,
+                    ["y"] = 0
+                },
+                ["enabled"] = true,
+                ["multiline"] = true,
+                ["numeric"] = false,
+                ["password"] = false,
+                ["readOnly"] = true,
+                ["tabOrder"] = 10,
+                ["text"] = "",
+                ["textWrapping"] = true,
+                ["tooltip"] = "Discord Chat",
+                ["visible"] = true,
+                ["zindex"] = 0
+            },
+            ["skin"] = {
+                ["params"] = { ["name"] = "editBoxNew" },
+                ["states"] = {
+                    ["released"] = {
+                        [1] = {
+                            ["bkg"] = { ["center_center"] = "0x00000099" },
+                            ["text"] = {
+                                ["font"] = "CONSOLA.TTF",
+                                ["fontSize"] = 14,
+                                ["lineHeight"] = 16,
+                                ["color"] = "0xffffffff"
+                            }
+                        }
+                    }
+                }
+            },
+            ["type"] = "EditBox"
+        },
+        ["Box"] = {
+            ["children"] = {
+                ["InputBox"] = {
+                    ["params"] = {
+                        ["acceptDecimalPoint"] = false,
+                        ["bounds"] = {
+                            ["h"] = 28,
+                            ["w"] = 397,
+                            ["x"] = 0,
+                            ["y"] = 2
+                        },
+                        ["enabled"] = true,
+                        ["multiline"] = false,
+                        ["numeric"] = false,
+                        ["password"] = false,
+                        ["readOnly"] = false,
+                        ["tabOrder"] = 20,
+                        ["text"] = "",
+                        ["textWrapping"] = false,
+                        ["tooltip"] = "Nachricht an Discord",
+                        ["visible"] = true,
+                        ["zindex"] = 1
+                    },
+                    ["skin"] = {
+                        ["params"] = { ["name"] = "editBoxNew" },
+                        ["states"] = {
+                            ["released"] = {
+                                [1] = {
+                                    ["bkg"] = { ["center_center"] = "0x101010dd" },
+                                    ["text"] = {
+                                        ["font"] = "CONSOLA.TTF",
+                                        ["fontSize"] = 14,
+                                        ["color"] = "0xffffffff"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    ["type"] = "EditBox"
+                },
+                ["SendButton"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 28,
+                            ["w"] = 78,
+                            ["x"] = 402,
+                            ["y"] = 2
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 30,
+                        ["text"] = "Senden",
+                        ["tooltip"] = "Nachricht senden",
+                        ["visible"] = true,
+                        ["zindex"] = 1
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "buttonSkinAwacs" } },
+                    ["type"] = "Button"
+                },
+                ["ClearButton"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 28,
+                            ["w"] = 70,
+                            ["x"] = 485,
+                            ["y"] = 2
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 40,
+                        ["text"] = "Leeren",
+                        ["tooltip"] = "Lokalen Verlauf leeren",
+                        ["visible"] = true,
+                        ["zindex"] = 1
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "buttonSkinAwacs" } },
+                    ["type"] = "Button"
+                }
+            },
+            ["params"] = {
+                ["bounds"] = {
+                    ["h"] = 34,
+                    ["w"] = 560,
+                    ["x"] = 0,
+                    ["y"] = 306
+                },
+                ["enabled"] = true,
+                ["text"] = "",
+                ["tooltip"] = "",
+                ["visible"] = true,
+                ["zindex"] = 0
+            },
+            ["skin"] = { ["params"] = { ["name"] = "panelSkin" } },
+            ["type"] = "Panel"
+        }
+    }
+}

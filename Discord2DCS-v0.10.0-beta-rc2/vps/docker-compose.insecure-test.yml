@@ -1,0 +1,14 @@
+# NUR FUER TEMPORAERE TESTS OHNE TLS.
+# Dieser Stack veroeffentlicht Port 8766 direkt im Internet.
+services:
+  discord2dcs:
+    build: .
+    container_name: discord2dcs
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${WS_PORT:-8766}:${WS_PORT:-8766}/tcp"
+    volumes:
+      - ./certs:/certs:ro
+      - ./data:/data

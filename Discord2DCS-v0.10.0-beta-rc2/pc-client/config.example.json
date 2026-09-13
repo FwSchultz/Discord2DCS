@@ -1,0 +1,13 @@
+{
+  "vps_url": "wss://discord2dcs.example.com/ws",
+  "pairing_code": "D2DCS-XXXX-XXXX-XXXX-XXXX",
+  "access_token": "",
+  "client_name": "DCS-PC",
+  "dcs_host": "127.0.0.1",
+  "dcs_port": 8765,
+  "reconnect_seconds": 3.0,
+  "tls_ca_file": "",
+  "queue_size": 50,
+  "log_level": "INFO",
+  "language": "de"
+}

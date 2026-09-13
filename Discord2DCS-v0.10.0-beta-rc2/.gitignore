@@ -1,0 +1,44 @@
+# Secrets and runtime configuration
+.env
+**/.env
+*.pem
+*.key
+
+# Discord2DCS server state
+vps/data/*
+!vps/data/.gitkeep
+vps/certs/*
+!vps/certs/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# Local client identity/configuration
+pc-client/config.json
+**/client.pid
+install-state.json
+
+# Logs
+*.log
+Logs/
+
+# Python
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Windows / editors
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Local backups / build output
+*.backup*
+*.bak
+_dist/
+build/
+dist/
+Discord2DCS-*.zip

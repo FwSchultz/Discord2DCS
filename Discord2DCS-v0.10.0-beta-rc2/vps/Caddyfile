@@ -1,0 +1,7 @@
+{$PUBLIC_HOSTNAME} {
+    @discord2dcs_ws path /ws
+    reverse_proxy @discord2dcs_ws discord2dcs:{$WS_PORT}
+
+    respond /health "Discord2DCS OK" 200
+    respond "Discord2DCS" 200
+}

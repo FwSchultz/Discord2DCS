@@ -1,0 +1,111 @@
+Discord2DCS 0.10.0-beta-rc2
+Discord ↔ DCS without Alt+Tab
+
+============================================================
+DEUTSCH
+============================================================
+
+WAS IST DISCORD2DCS?
+Discord2DCS zeigt Nachrichten aus dem Discord-Textkanal deiner Community direkt in einem eigenen DCS-Overlay an. Du kannst aus DCS antworten, ohne mit Alt+Tab zu Discord wechseln zu müssen.
+
+FÜR WEN IST DAS?
+Für DCS-Communities, Staffeln und Trainingsgruppen, die Discord auch während des Fluges nutzen möchten.
+
+WICHTIG:
+Deine Community muss einen Discord2DCS-Server/Bot betreiben. Als normaler Pilot brauchst du nur:
+- die Serveradresse deiner Community
+- einen persönlichen Pairing-Code vom Admin
+
+INSTALLATION – GANZ EINFACH
+1. ZIP herunterladen.
+2. Rechtsklick auf die ZIP → "Alle extrahieren...".
+3. Den entpackten Ordner öffnen.
+4. INSTALL.bat doppelklicken.
+5. Sprache wählen.
+6. Serveradresse vom Admin eingeben, z. B. wss://dcs.example.de/ws
+7. Persönlichen Pairing-Code eingeben.
+8. Optional Windows-Autostart aktivieren.
+9. Wenn DCS offen war: DCS vollständig schließen und neu starten.
+10. In DCS mit Strg + Shift + D das Overlay ein-/ausblenden.
+
+Python muss NICHT manuell installiert werden. Der Installer prüft Python 3.12 und installiert bei Bedarf Python 3.12.10 automatisch von python.org.
+
+DCS-EINSTELLUNGEN
+Unter DCS → Einstellungen → Spezial → Discord2DCS kannst du:
+- Discord2DCS aktivieren/deaktivieren
+- das Overlay beim DCS-Start anzeigen/verbergen
+- Systemmeldungen ein-/ausblenden
+- Sprache auf Auto, Deutsch oder English setzen
+
+HAUPTFUNKTIONEN
+- Discord → DCS Nachrichten
+- DCS → Discord Antworten
+- verschlüsselte WSS/TLS-Verbindung
+- persönliches einmaliges Pairing
+- eigener Access-Token pro Nutzer
+- Deutsch und Englisch
+- Desktop- und DCS-Icon
+- Update, Repair, Uninstall und optionaler Autostart
+
+INSTALLATIONSORDNER
+%LOCALAPPDATA%\Discord2DCS
+
+SUPPORT-LOGS
+%LOCALAPPDATA%\Discord2DCS\pc-client\Discord2DCS-Client.log
+%USERPROFILE%\Saved Games\DCS*\Logs\Discord2DCS.log
+
+HINWEIS ZUM RELEASE CANDIDATE
+Die Kernfunktionen wurden praktisch getestet. Vor dem endgültigen öffentlichen Beta-Release ist noch ein kompletter Fresh-Install-Test auf einem zweiten/sauberen Windows-PC vorgesehen.
+
+============================================================
+ENGLISH
+============================================================
+
+WHAT IS DISCORD2DCS?
+Discord2DCS mirrors your community's Discord text channel into a dedicated DCS overlay and lets you reply from DCS without Alt+Tab.
+
+WHO IS IT FOR?
+DCS communities, squadrons and training groups that want Discord chat available while flying.
+
+IMPORTANT:
+Your community must run a Discord2DCS server/bot. A normal pilot only needs:
+- the community server address
+- a personal pairing code from an admin
+
+INSTALLATION – EASY MODE
+1. Download the ZIP.
+2. Right-click the ZIP → "Extract All...".
+3. Open the extracted folder.
+4. Double-click INSTALL.bat.
+5. Choose the language.
+6. Enter the server address from your admin, e.g. wss://dcs.example.com/ws
+7. Enter your personal pairing code.
+8. Optionally enable Windows autostart.
+9. If DCS was open, close it completely and restart it.
+10. Press Ctrl + Shift + D in DCS to toggle the overlay.
+
+Python does NOT need to be installed manually. The installer checks Python 3.12 and can install Python 3.12.10 automatically from python.org.
+
+DCS OPTIONS
+Under DCS → Options → Special → Discord2DCS you can:
+- enable/disable Discord2DCS
+- show/hide the overlay on DCS start
+- show/hide system messages
+- choose Auto, Deutsch or English
+
+FEATURES
+- Discord → DCS messages
+- DCS → Discord replies
+- encrypted WSS/TLS transport
+- personal one-time pairing
+- individual access token per user
+- German and English
+- Desktop and DCS branding icons
+- Update, Repair, Uninstall and optional autostart
+
+INSTALL FOLDER
+%LOCALAPPDATA%\Discord2DCS
+
+SUPPORT LOGS
+%LOCALAPPDATA%\Discord2DCS\pc-client\Discord2DCS-Client.log
+%USERPROFILE%\Saved Games\DCS*\Logs\Discord2DCS.log
