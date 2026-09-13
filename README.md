@@ -18,8 +18,23 @@
 
 > **Public Beta:** Die Kernfunktionen und eine vollständige Neuinstallation auf einem zweiten/sauberen Windows-PC wurden erfolgreich getestet.
 
+## Downloads
+
+### ✈️ Für Piloten / Clients
+
+**[⬇️ Discord2DCS Community Client v0.10.0-beta herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
+
+Enthält den Windows-Client, DCS-Hook, Ingame-Overlay, Installer, Update/Repair und die DCS-Special-Options.
+
+### 🖥️ Für Community-/Server-Admins
+
+**[⬇️ Discord2DCS Server v0.10.0-beta herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
+
+Enthält den Discord-Bot, die WebSocket-Bridge, Docker-Setup, TLS-Beispiele sowie die Server-Einrichtungsanleitung.
+
 ## Inhaltsverzeichnis
 
+- [Downloads](#downloads)
 - [Was ist Discord2DCS?](#was-ist-discord2dcs)
 - [Was brauche ich als Pilot?](#was-brauche-ich-als-pilot)
 - [Installation für Piloten – Schritt für Schritt](#installation-für-piloten--schritt-für-schritt)
@@ -69,6 +84,8 @@ Du brauchst nur:
 Du musst **Python, Lua, Docker und GitHub nicht kennen**. Python 3.12 wird vom Installer geprüft und bei Bedarf automatisch von python.org installiert. Die digitale Signatur des Python-Installers wird vor der Installation geprüft.
 
 ## Installation für Piloten – Schritt für Schritt
+
+➡️ **[Community-Client direkt herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
 
 ### 1. ZIP vollständig entpacken
 
@@ -268,6 +285,8 @@ DCS:
 Bei einer Fehlermeldung am besten **beide Logs** mitsenden.
 
 ## Für Community-Admins
+
+➡️ **[Server-Paket direkt herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
 
 Normale Piloten benötigen **keinen eigenen VPS**. Eine Community betreibt einmal zentral den Discord2DCS-Server/Bot.
 
