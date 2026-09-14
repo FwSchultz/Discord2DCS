@@ -5,7 +5,7 @@
 
 **Discord ↔ DCS – without Alt+Tab.**
 
-![Version](https://img.shields.io/badge/version-0.10.0-beta-blue)
+![Version](https://img.shields.io/badge/version-0.11.0-beta-blue)
 ![DCS World](https://img.shields.io/badge/DCS%20World-2.9%2B-informational)
 ![Windows](https://img.shields.io/badge/client-Windows-0078D4)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB)
@@ -22,15 +22,16 @@
 
 ### ✈️ For pilots / clients
 
-**[⬇️ Download Discord2DCS Community Client v0.10.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
+**[⬇️ Download Discord2DCS Community Client v0.11.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Community-Client-v0.11.0-beta.zip)**
 
-Includes the Windows client, DCS hook, in-game overlay, installer, update/repair tools and DCS Special Options.
+Contains the Windows client, DCS hook, in-game overlay, installer, update/repair tools and DCS Special Options.
 
 ### 🖥️ For community / server admins
 
-**[⬇️ Download Discord2DCS Server v0.10.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
+**[⬇️ Download Discord2DCS Server v0.11.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Server-v0.11.0-beta.zip)**
 
-Includes the Discord bot, WebSocket bridge, Docker setup, TLS examples and the server setup guide.
+Contains the Discord bot, WebSocket bridge, Docker setup, TLS examples and server setup guide. Supports a domain, secure public IP without a domain, and an insecure test mode.
+
 
 ## Contents
 
@@ -69,14 +70,14 @@ Only:
 
 - DCS World on Windows,
 - internet access,
-- the community's **server address**,
+- the community's **server address or public IP**,
 - a personal **pairing code** from an admin.
 
 No Python, Lua, Docker or GitHub knowledge is required. The installer checks for Python 3.12 and can install Python 3.12.10 automatically from python.org after verifying the installer's digital signature.
 
 ## Pilot installation – step by step
 
-➡️ **[Download the Community Client directly](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
+➡️ **[Download Community Client v0.11.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Community-Client-v0.11.0-beta.zip)**
 
 1. Download the Community Client ZIP.
 2. Right-click it and select **Extract All…**. Do not run the installer from inside the ZIP viewer.
@@ -150,9 +151,9 @@ If a pairing code is invalid or expired, the admin must create a new code with `
 
 ## For community admins
 
-➡️ **[Download the Server Package directly](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
+➡️ **[Download Server Package v0.11.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Server-v0.11.0-beta.zip)**
 
-Normal pilots do **not** need their own VPS. A community runs one central server/bot. See [SERVER-ADMIN-GUIDE.md](SERVER-ADMIN-GUIDE.md).
+Normal pilots do **not** need their own VPS. A community runs one central server/bot. See [SERVER-ADMIN-GUIDE_EN.md](SERVER-ADMIN-GUIDE_EN.md). The server package includes an interactive `SETUP-SERVER.sh` for domain, secure public-IP-without-domain, or test mode.
 
 ## Discord admin commands
 
@@ -176,7 +177,7 @@ Supported validity formats include preset days, custom values such as `45d`, `8w
 - User chat messages are not automatically translated.
 - DCS Special Options are loaded by the hook at startup; restart DCS after changes.
 - The Community Client targets Windows/DCS.
-- The bundled automatic production TLS setup currently assumes a hostname/domain. `ws://IP:8766` is available for testing but is **not recommended for public production use**. A convenient secure no-domain setup remains a release item.
+- Secure operation without a domain is supported with a fixed public IPv4 address and an automatically renewed Let's Encrypt IP certificate. The unencrypted `ws://IP:8766` mode remains test-only.
 
 ## License
 

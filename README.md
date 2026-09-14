@@ -5,7 +5,7 @@
 
 **Discord ↔ DCS – ohne Alt+Tab.**
 
-![Version](https://img.shields.io/badge/version-0.10.0-beta-blue)
+![Version](https://img.shields.io/badge/version-0.11.0-beta-blue)
 ![DCS World](https://img.shields.io/badge/DCS%20World-2.9%2B-informational)
 ![Windows](https://img.shields.io/badge/client-Windows-0078D4)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB)
@@ -22,15 +22,16 @@
 
 ### ✈️ Für Piloten / Clients
 
-**[⬇️ Discord2DCS Community Client v0.10.0-beta herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
+**[⬇️ Discord2DCS Community Client v0.11.0-beta herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Community-Client-v0.11.0-beta.zip)**
 
 Enthält den Windows-Client, DCS-Hook, Ingame-Overlay, Installer, Update/Repair und die DCS-Special-Options.
 
 ### 🖥️ Für Community-/Server-Admins
 
-**[⬇️ Discord2DCS Server v0.10.0-beta herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
+**[⬇️ Discord2DCS Server v0.11.0-beta herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Server-v0.11.0-beta.zip)**
 
-Enthält den Discord-Bot, die WebSocket-Bridge, Docker-Setup, TLS-Beispiele sowie die Server-Einrichtungsanleitung.
+Enthält den Discord-Bot, die WebSocket-Bridge, Docker-Setup, TLS-Beispiele sowie die Server-Einrichtungsanleitung. Unterstützt Domain, sichere öffentliche IP ohne Domain und einen unsicheren Testmodus.
+
 
 ## Inhaltsverzeichnis
 
@@ -78,14 +79,14 @@ Du brauchst nur:
 
 - DCS World unter Windows,
 - Internetzugang,
-- die **Serveradresse** deiner Community,
+- die **Serveradresse oder öffentliche IP** deiner Community,
 - einen **persönlichen Pairing-Code** vom Community-Admin.
 
 Du musst **Python, Lua, Docker und GitHub nicht kennen**. Python 3.12 wird vom Installer geprüft und bei Bedarf automatisch von python.org installiert. Die digitale Signatur des Python-Installers wird vor der Installation geprüft.
 
 ## Installation für Piloten – Schritt für Schritt
 
-➡️ **[Community-Client direkt herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Community-Client-v0.10.0-beta.zip)**
+➡️ **[Community-Client v0.11.0-beta direkt herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Community-Client-v0.11.0-beta.zip)**
 
 ### 1. ZIP vollständig entpacken
 
@@ -128,13 +129,15 @@ Wenn noch kein DCS-Saved-Games-Profil existiert, starte DCS einmal vollständig,
 
 ### 4. Serveradresse eingeben
 
-Vom Admin bekommst du normalerweise eine Adresse wie:
+Vom Admin bekommst du genau eine fertige Serveradresse. Je nach Server kann das eine Domain, eine sichere öffentliche IP oder eine Test-URL sein:
 
 ```text
-wss://dcs.example.de/ws
+dcs.example.de
+203.0.113.25
+ws://203.0.113.25:8766/ws   # nur Testmodus
 ```
 
-Wenn du nur `dcs.example.de` eingibst, ergänzt der Installer automatisch `wss://` und `/ws`.
+Bei Domain oder einfacher öffentlicher IP ergänzt der Installer automatisch `wss://` und `/ws`. `ws://` wird weiterhin deutlich als unsicher markiert.
 
 ### 5. Pairing-Code eingeben
 
@@ -286,11 +289,13 @@ Bei einer Fehlermeldung am besten **beide Logs** mitsenden.
 
 ## Für Community-Admins
 
-➡️ **[Server-Paket direkt herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.10.0-beta/Discord2DCS-Server-v0.10.0-beta.zip)**
+➡️ **[Server-Paket v0.11.0-beta direkt herunterladen](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Server-v0.11.0-beta.zip)**
 
 Normale Piloten benötigen **keinen eigenen VPS**. Eine Community betreibt einmal zentral den Discord2DCS-Server/Bot.
 
-Die ausführliche Anleitung steht in [SERVER-ADMIN-GUIDE.md](SERVER-ADMIN-GUIDE.md).
+Die ausführliche Anleitung steht in [SERVER-ADMIN-GUIDE.md](SERVER-ADMIN-GUIDE.md). Das Serverpaket enthält außerdem `SETUP-SERVER.sh`, das Domain, sichere öffentliche IP ohne Domain und Testmodus interaktiv einrichtet.
+
+**Auf einem frischen Debian-/Ubuntu-VPS installiert `SETUP-SERVER.sh` Docker Engine und Docker Compose bei Bedarf automatisch.**
 
 Kurz benötigt werden:
 
@@ -339,7 +344,7 @@ Laufzeiten können z. B. `30d`, `90d`, `365d`, `8w`, ein festes Datum oder `Life
 - Chatnachrichten werden nicht automatisch übersetzt.
 - Die DCS-Special-Optionen werden beim Start des Hooks eingelesen; nach Änderungen DCS neu starten.
 - Der Community-Client ist für Windows/DCS ausgelegt.
-- Das mitgelieferte automatische TLS-Setup ist derzeit auf einen Hostnamen/Domain ausgelegt. `ws://IP:8766` ist als Testmodus möglich, aber **nicht für öffentlichen Produktivbetrieb empfohlen**. Ein komfortabler sicherer No-Domain-Modus ist noch ein Release-Thema.
+- Ein sicherer Betrieb ohne Domain ist über eine feste öffentliche IPv4 und ein automatisch erneuertes Let's-Encrypt-IP-Zertifikat möglich. Der unverschlüsselte `ws://IP:8766`-Modus bleibt ausschließlich für Tests vorgesehen.
 
 ## Dateien und Projektstruktur
 

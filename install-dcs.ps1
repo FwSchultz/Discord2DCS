@@ -10,12 +10,12 @@ $savedGames = Join-Path $env:USERPROFILE "Saved Games"
 $messages = @{
     de = @{
         missing = "Kein DCS-Saved-Games-Ordner gefunden. Erwartet wurde z. B. 'Saved Games\\DCS' oder 'Saved Games\\DCS.openbeta'."
-        installed = "Discord2DCS v0.10.0-beta wurde installiert nach:"
+        installed = "Discord2DCS v0.11.0-beta wurde installiert nach:"
         restart = "DCS danach vollständig neu starten."
     }
     en = @{
         missing = "No DCS Saved Games folder found. Expected e.g. 'Saved Games\\DCS' or 'Saved Games\\DCS.openbeta'."
-        installed = "Discord2DCS v0.10.0-beta was installed to:"
+        installed = "Discord2DCS v0.11.0-beta was installed to:"
         restart = "Restart DCS completely afterwards."
     }
 }

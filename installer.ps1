@@ -5,7 +5,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$Version = '0.10.0-beta'
+$Version = '0.11.0-beta'
 $SourceRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $InstallRoot = Join-Path $env:LOCALAPPDATA 'Discord2DCS'
 $InstalledClient = Join-Path $InstallRoot 'pc-client'
@@ -53,7 +53,7 @@ $Texts = @{
         installation='Installation'; dcs_install='DCS-Hook installieren'; dcs_files='DCS-Dateien'; python_check='Python 3.12 und PC-Client prüfen'; python_ready='Python-Umgebung und Abhängigkeiten sind bereit.';
         legacy_ok='Vorhandene Kopplung aus alter Installation übernommen'; legacy_warn='Alte config.json konnte nicht automatisch übernommen werden'; configured='PC-Client konfiguriert.';
         token_found='Vorhandene persönliche Kopplung erkannt. Access-Token bleibt erhalten.'; pair_found='Vorhandener Pairing-Code erkannt und beibehalten.';
-        community_setup='Community-Verbindung einrichten'; server_example='Beispiel: dcs.example.de   oder   wss://dcs.example.de/ws'; server_address='Serveradresse'; insecure='Diese Verbindung ist NICHT verschlüsselt.';
+        community_setup='Community-Verbindung einrichten'; server_example='Adresse vom Community-Admin:  dcs.example.de  ODER  203.0.113.25  ODER Test: ws://203.0.113.25:8766/ws'; server_address='Serveradresse / öffentliche IP'; insecure='Diese Verbindung ist NICHT verschlüsselt.';
         insecure_confirm='Unsicheres ws:// wirklich verwenden? Tippe JA'; pair_code='Persönlicher Pairing-Code'; shortcuts='Verknüpfungen erstellen'; shortcuts_ok='Desktop- und Startmenü-Verknüpfungen erstellt.';
         autostart_off='Windows-Autostart deaktiviert.'; autostart_on='Windows-Autostart aktiviert.'; autostart_prompt='Discord2DCS bei Windows-Anmeldung automatisch im Hintergrund starten? [J/n]';
         uninstall='Discord2DCS deinstallieren'; uninstall_hooks='DCS-Hook und Verknüpfungen entfernt.'; uninstall_delete='Die lokale Discord2DCS-Installation wird jetzt gelöscht.';
@@ -67,7 +67,7 @@ $Texts = @{
         installation='Installation'; dcs_install='Install DCS hook'; dcs_files='DCS files'; python_check='Check Python 3.12 and PC client'; python_ready='Python environment and dependencies are ready.';
         legacy_ok='Existing pairing imported from previous installation'; legacy_warn='Old config.json could not be imported automatically'; configured='PC client configured.';
         token_found='Existing personal pairing detected. Access token will be kept.'; pair_found='Existing pairing code detected and kept.';
-        community_setup='Set up community connection'; server_example='Example: dcs.example.com   or   wss://dcs.example.com/ws'; server_address='Server address'; insecure='This connection is NOT encrypted.';
+        community_setup='Set up community connection'; server_example='Address from your community admin:  dcs.example.com  OR  203.0.113.25  OR test: ws://203.0.113.25:8766/ws'; server_address='Server address / public IP'; insecure='This connection is NOT encrypted.';
         insecure_confirm='Really use insecure ws://? Type YES'; pair_code='Personal pairing code'; shortcuts='Create shortcuts'; shortcuts_ok='Desktop and Start Menu shortcuts created.';
         autostart_off='Windows autostart disabled.'; autostart_on='Windows autostart enabled.'; autostart_prompt='Start Discord2DCS automatically in the background when Windows signs in? [Y/n]';
         uninstall='Uninstall Discord2DCS'; uninstall_hooks='DCS hook and shortcuts removed.'; uninstall_delete='The local Discord2DCS installation will now be deleted.';
@@ -114,7 +114,16 @@ function Normalize-WebSocketUrl([string]$InputUrl) {
         return $normalized
     }
 
-    return "wss://${value.TrimEnd('/')}/ws"
+    $trimmed = $value.TrimEnd('/')
+    $parsedIp = $null
+    if ([System.Net.IPAddress]::TryParse($trimmed, [ref]$parsedIp)) {
+        if ($parsedIp.AddressFamily -eq [System.Net.Sockets.AddressFamily]::InterNetworkV6) {
+            return "wss://[$trimmed]/ws"
+        }
+        return "wss://$trimmed/ws"
+    }
+
+    return "wss://$trimmed/ws"
 }
 
 function Get-DcsSavedGamesTargets {

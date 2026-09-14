@@ -1,4 +1,4 @@
-Discord2DCS 0.10.0-beta
+Discord2DCS 0.11.0-beta
 Discord ↔ DCS without Alt+Tab
 
 ============================================================

@@ -1,11 +1,20 @@
-# Discord2DCS 0.10.0-beta – Release-Checkliste
+# Discord2DCS 0.11.0-beta – Release-Checkliste
 
 ## Pflicht vor Public Beta
+
+- [x] Frischer Ubuntu-VPS: Docker/Compose durch `SETUP-SERVER.sh` erkannt bzw. vorbereitet.
+- [x] Modus `[2] Öffentliche IP ohne Domain` erfolgreich getestet.
+- [x] Let's-Encrypt-IP-Zertifikat (`shortlived`) erfolgreich ausgestellt.
+- [x] `https://<IP>/health` liefert HTTP/2 200.
+- [x] Pairing über reine öffentliche IP erfolgreich.
+- [x] Discord → DCS und DCS → Discord über `wss://<IP>/ws` erfolgreich getestet.
+- [x] Certbot-Renewal-Service manuell getestet: `status=0/SUCCESS`.
+- [x] Renewal-Timer aktiv und wartend.
 
 - [x] MIT-Lizenz ausgewählt und `LICENSE` hinzugefügt.
 - [x] Frische Installation auf einem zweiten/sauberen Windows-PC erfolgreich getestet.
 - [ ] Test mit bereits vorhandenem Python **und** ohne Python durchführen.
-- [ ] Update von v0.9.4-alpha auf 0.10.0-beta testen; Access-Token muss erhalten bleiben.
+- [ ] Update von v0.9.4-alpha auf 0.11.0-beta testen; Access-Token muss erhalten bleiben.
 - [ ] Deutsch und English im Installer testen.
 - [ ] DCS Special Options testen: Aktivieren, Overlay beim Start, Systemmeldungen, Sprache.
 - [ ] Desktop-Icon und DCS-Special-Icon prüfen.
@@ -23,8 +32,8 @@
 - [ ] Inhalt des GitHub-Repository-ZIPs hineinkopieren.
 - [ ] `git status` kontrollieren – keine Secrets oder Datenbankdateien.
 - [ ] README DE/EN auf GitHub prüfen.
-- [ ] Release `v0.10.0-beta` erstellen.
-- [ ] Als Release-Asset mindestens `Discord2DCS-Community-Client-v0.10.0-beta.zip` hochladen.
+- [ ] Release `v0.11.0-beta` erstellen.
+- [ ] Als Release-Asset mindestens `Discord2DCS-Community-Client-v0.11.0-beta.zip` hochladen.
 - [ ] Optional Komplettpaket für Server-Admins als zweites Asset hochladen.
 
 ## DCS User Files

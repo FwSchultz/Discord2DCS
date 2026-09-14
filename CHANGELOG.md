@@ -1,24 +1,58 @@
 # Changelog
 
-## 0.10.0-beta
+## 0.11.0-beta
+
+### Public beta – secure no-domain server mode
+- Promoted the successfully tested 0.11.0-beta-rc2 release candidate to public beta.
+- Fresh Ubuntu VPS setup tested successfully.
+- Docker Engine / Docker Compose preflight tested.
+- Secure WSS operation with a public IPv4 address and no domain tested successfully.
+- Let's Encrypt short-lived IP certificate issued successfully.
+- Automatic certificate-renewal timer installed and renewal service verified with exit status 0.
+- HTTPS health endpoint returned HTTP/2 200.
+- Pairing using only the public IPv4 address succeeded.
+- Discord → DCS and DCS → Discord both verified over `wss://<public-ip>/ws`.
+- Domain mode and insecure test mode remain available.
+- No bridge protocol changes compared with 0.11.0-beta-rc2.
+
+## 0.11.0-beta
+
+### Fresh VPS setup
+- Server setup now checks Docker Engine and the Docker Compose Plugin automatically.
+- On fresh Debian/Ubuntu hosts, Docker is installed from Docker's official APT repository when missing.
+- Docker is enabled, started and verified before Discord2DCS configuration begins.
+- Existing third-party Docker installations are not silently removed.
+- German and English server-admin documentation now starts from a clean VPS.
+- No Discord2DCS bridge protocol changes compared with 0.11.0-beta-rc1.
+
+## 0.11.0-beta
+
+### Server reachability setup
+- Added interactive `SETUP-SERVER.sh` with three modes: domain/hostname, secure public IPv4 without domain, and insecure test mode.
+- Secure IP mode configures Nginx + Certbot 5.4+ and Let's Encrypt short-lived IP certificates with automatic renewal.
+- Server setup prints the exact address that admins should give to pilots and writes `SERVER-INFO.txt`.
+- Windows installer now explicitly accepts a domain, a public IP, or a full insecure test URL.
+- Plain domain/public-IP input is normalized to `wss://.../ws`; insecure `ws://` still requires explicit confirmation.
+
+## 0.11.0-beta
 
 ### First public beta
-- Promoted the successfully tested 0.10.0-beta-rc2 release candidate to the first public beta.
+- Promoted the successfully tested 0.11.0-beta-rc2 release candidate to the first public beta.
 - Complete fresh installation on a second/clean Windows PC tested successfully.
 - Discord → DCS and DCS → Discord verified after fresh installation.
 - DCS Special Options, branding icons, pairing and Windows client installation verified.
-- No protocol or runtime behavior changes compared with 0.10.0-beta-rc2.
+- No protocol or runtime behavior changes compared with 0.11.0-beta-rc2.
 
-## 0.10.0-beta
+## 0.11.0-beta
 
 ### Licensing
 - Added the MIT License.
 - Copyright: `Copyright (c) 2026 FwSchultz`.
 - Updated German and English README license sections.
 - Updated the release checklist: licensing is complete.
-- No protocol or runtime behavior changes compared with 0.10.0-beta-rc1.
+- No protocol or runtime behavior changes compared with 0.11.0-beta-rc1.
 
-## 0.10.0-beta
+## 0.11.0-beta
 
 ### Release preparation
 - Documentation completely rewritten for first-time users in German and English.
