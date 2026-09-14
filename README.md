@@ -13,7 +13,7 @@
 ![Languages](https://img.shields.io/badge/languages-DE%20%7C%20EN-success)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-[English documentation](README_EN.md)
+[English documentation](README_EN.md) · [🗺️ Roadmap](ROADMAP.md)
 </div>
 
 > **Public Beta:** Die Kernfunktionen und eine vollständige Neuinstallation auf einem zweiten/sauberen Windows-PC wurden erfolgreich getestet.
@@ -352,14 +352,18 @@ Laufzeiten können z. B. `30d`, `90d`, `365d`, `8w`, ein festes Datum oder `Life
 Discord2DCS/
 ├── INSTALL.bat / UPDATE.bat / REPAIR.bat / UNINSTALL.bat
 ├── installer.ps1
-├── assets/                 # Logo + Windows-Icon
-├── Scripts/                # DCS GameGUI-Hook + Overlay
-├── Mods/tech/Discord2DCS/  # DCS Special Options + DCS-Icon
-├── pc-client/              # lokaler Windows-Bridge-Client
-├── vps/                    # Discord-Bot, WebSocket-Bridge, SQLite, Docker
-└── docs/                   # Dokumentation/Bilder
+├── pc-client/
+├── Scripts/
+│   ├── Discord2DCS/
+│   └── Hooks/
+├── Mods/tech/Discord2DCS/
+├── vps/
+├── docs/
+└── README.md / README_EN.md
 ```
 
 ## Lizenz
 
-Discord2DCS wird unter der **MIT License** veröffentlicht. Nutzung, Änderung und Weitergabe sind unter den Bedingungen der Datei [LICENSE](LICENSE) erlaubt.
+MIT License
+
+Copyright (c) 2026 FwSchultz
