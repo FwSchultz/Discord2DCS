@@ -13,7 +13,7 @@
 ![Languages](https://img.shields.io/badge/languages-DE%20%7C%20EN-success)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-[Deutsche Dokumentation](README.md)
+[Deutsche Dokumentation](README.md) · [🗺️ Roadmap](ROADMAP_EN.md)
 </div>
 
 > **Public Beta:** The core features and a complete fresh installation on a second/clean Windows PC have been tested successfully.
@@ -31,7 +31,6 @@ Contains the Windows client, DCS hook, in-game overlay, installer, update/repair
 **[⬇️ Download Discord2DCS Server v0.11.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Server-v0.11.0-beta.zip)**
 
 Contains the Discord bot, WebSocket bridge, Docker setup, TLS examples and server setup guide. Supports a domain, secure public IP without a domain, and an insecure test mode.
-
 
 ## Contents
 
@@ -83,7 +82,7 @@ No Python, Lua, Docker or GitHub knowledge is required. The installer checks for
 2. Right-click it and select **Extract All…**. Do not run the installer from inside the ZIP viewer.
 3. Open the extracted folder and double-click `INSTALL.bat`.
 4. Select `English` or `Deutsch`.
-5. Enter the server address, normally `wss://dcs.example.com/ws`.
+5. Enter the server address supplied by your community admin. This may be a domain, a secure public IPv4 address, or a test URL.
 6. Enter the one-time personal pairing code supplied by your admin.
 7. Choose whether Discord2DCS should start with Windows.
 8. If DCS was open, close it completely and start it again.
@@ -154,6 +153,8 @@ If a pairing code is invalid or expired, the admin must create a new code with `
 ➡️ **[Download Server Package v0.11.0-beta](https://github.com/FwSchultz/Discord2DCS/releases/download/v0.11.0-beta/Discord2DCS-Server-v0.11.0-beta.zip)**
 
 Normal pilots do **not** need their own VPS. A community runs one central server/bot. See [SERVER-ADMIN-GUIDE_EN.md](SERVER-ADMIN-GUIDE_EN.md). The server package includes an interactive `SETUP-SERVER.sh` for domain, secure public-IP-without-domain, or test mode.
+
+On a fresh Debian/Ubuntu VPS, `SETUP-SERVER.sh` can install Docker Engine and Docker Compose automatically when required.
 
 ## Discord admin commands
 
